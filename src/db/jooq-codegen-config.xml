@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration xmlns="http://www.jooq.org/xsd/jooq-codegen-3.8.0.xsd">
+    <jdbc>
+        <driver>com.mysql.jdbc.Driver</driver>
+        <url>jdbc:mysql://localhost:3306/test?useSSL=false</url>
+        <user>root</user>
+        <password>admin</password>
+    </jdbc>
+    <generator>
+        <database>
+            <name>org.jooq.util.mysql.MySQLDatabase</name>
+            <includes>.*</includes>
+            <excludes></excludes>
+            <inputSchema>test</inputSchema>
+            <outputSchema>test</outputSchema>
+            <outputSchemaToDefault>true</outputSchemaToDefault>
+            <dateAsTimestamp>false</dateAsTimestamp>
+            <unsignedTypes>false</unsignedTypes>
+            <includeExcludeColumns>true</includeExcludeColumns>
+        </database>
+        <generate>
+            <pojos>true</pojos>
+            <jpaAnnotations>false</jpaAnnotations>
+            <daos>true</daos>
+            <springAnnotations>false</springAnnotations>
+        </generate>
+        <target>
+            <encoding>UTF-8</encoding>
+            <packageName>com.mycompany.myapp.db</packageName>
+            <directory>target/generated-sources/jooq</directory>
+        </target>
+    </generator>
+</configuration>
